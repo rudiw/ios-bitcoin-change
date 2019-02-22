@@ -90,7 +90,7 @@ class ViewController: UIViewController,
 //    
     func updateWeatherData(json : JSON, symbol: String) {
         
-        if let price = json["bid"].double {
+        if let price = json["ask"].double {
             self.bitcoinPriceLabel.text = "\(symbol)\(price)";
         } else {
             self.bitcoinPriceLabel.text = "Unavailable";
